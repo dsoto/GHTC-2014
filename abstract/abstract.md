@@ -1,5 +1,5 @@
 ---
-title: Pico-power financial returns
+title: Consumer investment in watt-scale products
 author:
 - name: Daniel Soto
 - affiliation: Sonoma State University
@@ -11,11 +11,9 @@ these services need to be distributed energy to reach those beyond the
 grid.  Current investment focuses on centralized power plants and grid
 expansion.  In the absence of public funding, the unelectrified rural
 populations must rely on private financing.  In this paper, I compare
-the financial returns from pico-power consumer products for lighting and
+the financial returns from watt-scale consumer products for lighting and
 mobile phone charging and the available financing for consumers from
-microfinancing.  For many investments, there is not a technical and
-financial option that allows consumers to reduce their energy
-expenditures.  A comparison of the avoided cost in kerosene or phone
+microfinancing.  A comparison of the avoided cost in kerosene or phone
 charging and the monthly payment for a product shows that microfinance
 loan payments often exceed the avoided cost.  Many customers are not
 able to tolerate these higher recurring payments even though in the
