@@ -10,9 +10,8 @@ pdf:
 	#pandoc --template soto-paper.tex -o $(handle).pdf $(handle).md
 	pandoc --template soto-latex.tex -o $(handle).pdf $(handle).md
 
-# tex:
-# 	pandoc -t beamer --template soto-beamer.tex -o presentation.tex presentation.md
-# 	pdflatex presentation.tex
-#
+tex:
+	pandoc --template soto-latex.tex -o $(handle).tex $(handle).md
+
 # clean:
 # 	rm presentation.pdf presentation.tex *.log *.aux
