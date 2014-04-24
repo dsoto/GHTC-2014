@@ -140,11 +140,18 @@ $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
-%\author{$for(author)$$author$$sep$ \and $endfor$}
-\author{$for(author)$\IEEEauthorblockN{$author$}$sep$ \and $endfor$}
+
+
 \date{$date$}
 
 \begin{document}
+
+\author{$for(author)$
+\IEEEauthorblockN{$author.name$}
+\IEEEauthorblockA{$author.affiliation$}
+\and
+$endfor$}
+
 $if(title)$
 \maketitle
 $endif$

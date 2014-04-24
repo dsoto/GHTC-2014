@@ -2,7 +2,12 @@
 title: A consumer-based analysis of solar lantern financing
 author:
 - name: Daniel Soto
-  affiliation: Sonoma State University
+  affiliation: |
+    Sonoma State University
+    Cotati
+    Rohnert Park, CA
+- name: Collaborator
+  affiliation: UCB
 abstract: |
     1.3 Billion people will remain without electricity without significant
     investment in new energy services.  The IEA shows that about half of
@@ -63,9 +68,12 @@ abstract: |
 # Conclusion
 
 
-![Caption](../calculations/charging-returns.pdf)
+![Caption](charging-returns.pdf)
 
-![Caption](../calculations/general-returns.pdf)
+![Caption](general-returns.pdf)
+<!-- ![Caption](../calculations/charging-returns.pdf) -->
+
+<!-- ![Caption](../calculations/general-returns.pdf) -->
 
 
 <!--
