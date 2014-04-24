@@ -6,13 +6,14 @@
 
 handle=paper
 
-all: $(handle).md ../calculations/charging-returns.pdf general-returns.pdf
+# why does this rule run every time?
+all: $(handle).md charging-returns.pdf general-returns.pdf
 	#pandoc --template soto-paper.tex -o $(handle).pdf $(handle).md
 	pandoc --template soto-latex.tex -o $(handle).pdf $(handle).md
 
 charging-returns.pdf: ../calculations/charging-returns.ipynb
 	runipy ../calculations/charging-returns.ipynb
-	mv charging-returns.pdf ../calculations
+	#mv charging-returns.pdf ../calculations/
 
 general-returns.pdf: ../calculations/general-returns.ipynb
 	runipy ../calculations/general-returns.ipynb
