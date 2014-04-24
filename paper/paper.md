@@ -63,6 +63,11 @@ abstract: |
 # Conclusion
 
 
+![Caption](../calculations/charging-returns.pdf)
+
+![Caption](../calculations/general-returns.pdf)
+
+
 <!--
 ## Impact
 - How will this paper change our field?
