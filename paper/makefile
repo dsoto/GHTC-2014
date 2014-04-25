@@ -6,10 +6,10 @@
 
 handle=paper
 
-# why does this rule run every time?
-all: $(handle).md charging-returns.pdf general-returns.pdf
-	#pandoc --template soto-paper.tex -o $(handle).pdf $(handle).md
-	pandoc --template soto-latex.tex -o $(handle).pdf $(handle).md
+all: $(handle).pdf preprint.pdf
+
+$(handle).pdf: $(handle).md charging-returns.pdf general-returns.pdf
+	pandoc --template soto-latex-ghtc.tex -o $(handle).pdf $(handle).md
 
 charging-returns.pdf: ../calculations/charging-returns.ipynb
 	runipy ../calculations/charging-returns.ipynb
@@ -19,7 +19,10 @@ general-returns.pdf: ../calculations/general-returns.ipynb
 	runipy ../calculations/general-returns.ipynb
 
 tex:
-	pandoc --template soto-latex.tex -o $(handle).tex $(handle).md
+	pandoc --template soto-latex-ghtc.tex -o $(handle).tex $(handle).md
+
+preprint.pdf: $(handle).pdf
+	pandoc --template soto-preprint.tex -o preprint.pdf $(handle).md
 
 # clean:
 # 	rm presentation.pdf presentation.tex *.log *.aux
