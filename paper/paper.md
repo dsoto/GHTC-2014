@@ -46,9 +46,21 @@ abstract: |
 - Simple payback
 - NPV
 - IRR
+- Demonstrate difficulty of saving
+    - extend lighting africa by looking at percentage of income
+- Net avoided energy expenditure
+    - as percentage of energy
+    - as percentage of income
+
+## Quantify costs and benefits
+- Monthly/daily financing
+- Avoided kerosene costs
+    - Show costs in terms of ml of kerosene displaced
+- Revenue generation
 
 ## Energy products as investments
 - Demonstrate energy as investment
+- What are the customer returns?
 
 # Results
 
@@ -60,17 +72,27 @@ abstract: |
 - Assumptions
 - Results
 
+## Battery charging system
+- Assumptions
+- Results
+
 # Discussion
+
+## Need to incorporate this into design process
+
+## Difficulty once avoided costs are gone
+
+## Need for research to quantify assumptions
+- There is a need to quantify and publish these costs and benefits
+
 
 # Conclusion
 
 
 ![Caption](charging-returns.pdf)
 
-![Caption](general-returns.pdf)
-<!-- ![Caption](../calculations/charging-returns.pdf) -->
-
-<!-- ![Caption](../calculations/general-returns.pdf) -->
+![Several returns are plotted as a function of the time that the
+  investment is held.](general-returns.pdf)
 
 
 <!--
