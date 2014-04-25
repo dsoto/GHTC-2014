@@ -2,10 +2,7 @@
 title: A consumer-based analysis of solar lantern financing
 author:
 - name: Daniel Soto
-  affiliation: |
-    Sonoma State University
-    Cotati
-    Rohnert Park, CA
+  affiliation: Sonoma State University
 - name: Collaborator
   affiliation: UCB
 abstract: |
