@@ -22,4 +22,5 @@ $(handle)-preprint.pdf: $(handle).pdf
 	pandoc --template $(templates)/soto-preprint.tex -o $(handle)-preprint.pdf $(handle).md
 
 $(handle).html: $(handle).pdf
-	pandoc --template $(templates)/soto-template.html -N -o $(handle).html $(handle).md
+	pandoc --template $(templates)/soto-template.html -N --css=../css/soto.css -o $(handle).html $(handle).md
+
