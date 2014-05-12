@@ -31,6 +31,7 @@ abstract: |
 <!-- TODO: get citations working using CSL plugins -->
 
 # Introduction
+- a citation occurs [@MVPEnergy]
 
 ## Big picture
 - Assume private financing
