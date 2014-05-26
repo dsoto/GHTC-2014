@@ -29,8 +29,13 @@ biab-cost.pdf: $(calcs)
 	runipy $(calcs)
 
 
-tex:
+preprint-tex:
 	pandoc --filter pandoc-citeproc --csl=ieee.csl --bibliography=$(handle).bib --template $(templates)/soto-preprint.tex -o $(handle).tex $(handle).md
+
+tex:
+	pandoc --filter pandoc-citeproc --csl=ieee.csl --bibliography=$(handle).bib --template $(templates)/soto-latex-ghtc.tex -o $(handle).tex $(handle).md
+	#sed -i bak s/longtable/supertabular/g paper.tex
+	#pdflatex $(handle).tex
 
 $(handle)-preprint.pdf: $(handle).md charging-returns.pdf general-returns.pdf monthly-payment.pdf
 	pandoc --filter pandoc-citeproc --csl=ieee.csl --bibliography=$(handle).bib --template $(templates)/soto-preprint.tex -o $(handle)-preprint.pdf $(handle).md
