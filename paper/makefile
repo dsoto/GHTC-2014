@@ -3,6 +3,8 @@
 
 # TODO: how do I handle plots as a list?  this is easier since they all
 # come from same file
+# TODO: preprocess tex file and convert longtable to tabular or whatever
+# will work in two-column mode
 
 handle=paper
 calcs=../calculations/ghtc-2014-supplementary.ipynb
@@ -22,6 +24,10 @@ general-returns.pdf: $(calcs)
 
 monthly-payment.pdf: $(calcs)
 	runipy $(calcs)
+
+biab-cost.pdf: $(calcs)
+	runipy $(calcs)
+
 
 tex:
 	pandoc --filter pandoc-citeproc --csl=ieee.csl --bibliography=$(handle).bib --template $(templates)/soto-preprint.tex -o $(handle).tex $(handle).md
