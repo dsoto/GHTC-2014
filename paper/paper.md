@@ -26,20 +26,21 @@ abstract: |
 ---
 
 <!--
-TODO: fix table output to work with two column files
+TODO: fix table output to work with two column files (try ctable?)
+https://github.com/jgm/pandoc/issues/1023
 TODO: reference for charging costs
 TODO: how do we express the variability of lantern cost, kerosene cost, and kerosene displacement?
 TODO: can we create a contour graph of IRR for initial cost and avoided cost?
 TODO: revisit writing in the sciences lectures
 TODO: make a table that compares different devices and affordability
-TODO: make a regime plot with financing options both microfinance and
-in-house finance
+TODO: make a regime plot with financing options both microfinance and in-house finance
 TODO: infer terms of MKOPA dlight offering
 TODO: create displaced kerosene calculation
 TODO: is there a published relationship between lumen output and ml avoided kerosene?
 TODO: what levels of income is this true for?
 TODO: be sure that no content is clipped because of latex.  will
 probably want to change the preprint template to fix this.
+TODO: use marked custom preprocessor?
 -->
 
 
@@ -115,14 +116,28 @@ The devices we will consider will be solar photovoltaic devices, often
 with LED lighting and battery storage.  This framework is applicable
 regardless of the technology.
 
+## Initial cost
 
+The cost of the device is the most parts of a financial decision for
+most customers.  For the devices available, price varies depending on
+the amount of energy available, the features of the device, and the
+quality of the product.  Prices can range from as little as 10 USD for a
+small solar lantern to hundreds of USD for a photovoltaic solar home
+system with battery storage.  To evaluate if a product is affordable, a
+consumer will compare this purchase price against their current energy
+expenditures and overall income levels.
 
 ## Energy expenditures
 
 To determine the amount of available capital in a household for a clean
 energy purchase, we start by measuring the amount currently spent on
 energy that could be avoided by the device.
+Energy expenditures can take several monetary forms such as kerosene,
+candles, batteries, and phone charging as well as time lost in travel or
+adverse health effects.
 
+There is some data on energy related expenditures related to
+electricity from the Millennium Villages project.
 Data from the Millennium Villages project measures fuel expenses per
 household in several Sub-Saharan villages.
 [[@MVPEnergy]()]
@@ -144,17 +159,15 @@ candles.
 Table: Millennium Village surveys of energy expenditures by household.
 Values are in USD per year.
 
-We combine this with the income brackets in the Lighting Global
-literature.
-
 These values give us some guidance for the likely expenditures in
 off-grid locations.  However, as the variability indicates, it is
 necessary to evaluate the spending in a location where a pilot is being
 conducted.
-
-## Initial cost
-
-The initial cost of the device should be considered.
+Data on phone charging expenditures and time spent by household would be
+a valuable addition to these estimates.
+While the total energy spending by a customer is a good basis for
+estimations, it is important to quantify how much of this spending an
+energy device can replace.
 
 ## Expected returns
 
@@ -163,24 +176,25 @@ can bring to the household or what expenses the device can replace.  I
 will estimate this for a few broad classes of devices.  We usually
 compare this to the purchase price of the asset to see how quickly the
 purchase will pay for itself in energy savings.
-
 These returns may be in terms of kerosene or candles that now do not
 need to be purchased.  They may also be revenues such as income from
 charging a neighbor for cell phone charging.
-
 Once these expected returns are estimated, the customer determines what
 the available financing is and thus the monthly payment.
 
 
 ## Available finance
 
+Finance allows the consumer to spread the payments for a power device
+over time in smaller amounts.  The consumer will want to know, can these
+payments be smaller than my existing energy payments.  For many
+customers, the available finance will result in higher payments.
+
 Assuming the customer has no ability to save to purchase the device up
 front, the consumer must look for the available financing for the
 purchase.  If suitable financing cannot be found, the device may be out
 of reach.
-
 I will compile some financing options that are available for reference.
-
 Common sources of funding are microfinance institutions, and in-house
 financing products provided by the companies themselves.  Some of these
 are lease to own and pay-as-you-go financing schemes.
@@ -190,7 +204,8 @@ are lease to own and pay-as-you-go financing schemes.
 
 Having provided a general explanation of consumer expenditures, expected
 returns for products, and the available finance, we look at a few
-classes of products.
+classes of products.  I'll describe the solar lantern and business in a
+box products.
 
 
 ## Solar Lantern
@@ -199,12 +214,9 @@ classes of products.
 
 A solar lantern is a tiny solar power plant with battery storage for
 nighttime lighting applications.
-
-
 We can estimate the cost of these devices based on the costs of their
 components.  Assuming solar panel costs, storage cost, transportation
 costs, and the solar resource, we can estimate the purchase price.
-
 While we can find prices of these products, it is useful to look at the
 component costs and trends.
 
@@ -225,10 +237,8 @@ Quality Standards.
 The level of lighting that satisfied the survey participants is 25
 lumens with a run time of approximately 5 hours.  This is from the
 Lighting Global Standards Memo.
-
 The cost of a minimally acceptable solar lantern is about 10 USD and are
 one of the products most affordable to most consumers.
-
 These prices are likely to continue to decline over time due to
 improvements in LED and PV performance and cost.  We assume that the
 component costs of a lantern and a business-in-a-box solution are
@@ -268,13 +278,14 @@ With these we can estimate the avoided cost for a household based on a
 lantern purchase.  It is this avoided cost that can be directed to loan
 repayments.
 
-|  Kerosene Displacement (liter/day)  |  Avoided Cost (USD/day)  |  Avoided Cost (USD/month)  |  Initial Cost (USD)  |
+|  Avoided Kerosene (liter/day)  |  Avoided Cost (USD/day)  |  Avoided Cost (USD/month)  |  Initial Cost (USD)  |
 |:-----------------------------------:|:------------------------:|:--------------------------:|:--------------------:|
 |                0.06                 |          0.078           |            2.34            |          20          |
 |                0.09                 |          0.117           |            3.51            |          40          |
 |                0.14                 |          0.182           |            5.46            |          80          |
 
 Table: Avoided costs from displaced kerosene from lanterns.
+
 
 
 These all have a payback time of less than a year, but all require the
@@ -284,9 +295,20 @@ That is, the payback can also be thought of as the factor beyond the
 monthly payment that the customer must provide initially.  It may be
 more relevant to look at payback for the daily purchases, since this is
 the granularity of budgeting for many households.
-
+A harder to measure but plausible return could be increased business at
+a shop because customers are attracted by the higher quality of light.
+This benefit would likely disappear as more vendors buy improved
+lighting.
+Based on the length of time before the investment is paid back by the
+avoided kerosene costs, these investments are very attractive.  However,
+not all consumers have the available cash to purchase them.  We have to
+look at available financing options to bridge this gap.
 
 ### Available Finance
+
+- lower payments
+- for very cheap lanterns, financing may not be feasible
+- m-kopa, d.light
 
 The useful life of the product is set
 by the battery lifetime at what is likely 3-5 years.  Over these 3-5
@@ -311,9 +333,8 @@ companies offer finance to consumers in the form of installment
 payments.
 
 
+
 ## Business in a box
-
-
 
 Robust solutions for small-scale energy entrepreneurs are available for
 purchase.  These are moderately priced ($150) devices that have a solar panel,
@@ -330,6 +351,7 @@ attractive return.  The entrepreneur does incur a business risk since a
 competing phone charging solution in the same geographic area could sharply
 reduce demand and thus the income from the system.
 
+<!-- how do I express this as a range? -->
 
 - Cost of device \$150
 - cost of charge 0.20 USD
@@ -342,25 +364,36 @@ We can look at the return as a function of the time the asset is held and
 compare to available finance rates.
 
 
-
-
 ### Business in a box initial cost
+
+The business in a box solution is available and consists of a robustly
+engineering enclosure with battery storage on the order of 100 Wh.  The
+products usually come with a photovoltaic solar panel to charge the
+battery.  These devices are meant to generate income and have multiple
+output ports to charge phones or other devices simultaneously.
+
+![Caption](biab-cost.pdf)
+
 ### Business in a box expected returns
+
+
 
 If the electricity is sold in the form of a phone charge, the returns
 can be very attractive.
 If the electricity is sold at retail rates however, the returns are much
 less compelling.  This is a problem facing many minigrid enterprises.
 
-
-*need reference for cell phone charging numbers*
-
 Phone charging devices allow the user to avoid the cost of charging
 their own phone and can also generate revenue.
 
+<!--
+Questions:
+*need reference for cell phone charging numbers*
 *how long does it take to charge a phone*
 *what are technical limits of charging*
 *what are economic limits of charging*
+*what is the cost per minute of minutes vs the power to talk on phone*
+-->
 
 Customers report spending from 0.10 USD to 0.25 USD to charge the
 battery on their cell phone.  This represents about 5 Wh of DC energy in
@@ -383,7 +416,6 @@ also the time and power needed to charge multiple batteries.
 Table: Charging revenue in some markets
 
 
-*what is the cost per minute of minutes vs the power to talk on phone*
 
 Consider a device that charges a cell-phone during the day with a solar
 panel and a small charge controller.  The cost of this device will be
@@ -482,7 +514,7 @@ expensive but can be used longer, could reduce the monthly price and
 risk for a consumer.
 
 <!-- - Longer more expensive batteries also have this feature -->
-    <!-- - cite soto ghtc 2012 -->
+<!-- - cite soto ghtc 2012 -->
 
 
 We can plot the observed cost per daily watt hour for several models.
