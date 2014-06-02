@@ -26,13 +26,17 @@ abstract: |
 ---
 
 <!--
+TODO: restrict to lanterns for now
+TODO: outline discussion
+TODO: create charts comparing payment and available expenditures
+TODO: outline conclusion
+TODO: first draft of discussion
+TODO: first draft of conclusion
 TODO: fix table output to work with two column files (try ctable?)
 https://github.com/jgm/pandoc/issues/1023
 TODO: reference for charging costs
 TODO: how do we express the variability of lantern cost, kerosene cost, and kerosene displacement?
 TODO: can we create a contour graph of IRR for initial cost and avoided cost?
-TODO: revisit writing in the sciences lectures
-TODO: make a table that compares different devices and affordability
 TODO: make a regime plot with financing options both microfinance and in-house finance
 TODO: infer terms of MKOPA dlight offering
 TODO: create displaced kerosene calculation
@@ -42,10 +46,6 @@ TODO: be sure that no content is clipped because of latex.  will
 probably want to change the preprint template to fix this.
 TODO: use marked custom preprocessor?
 -->
-
-
-<!-- MAIN POINTS -->
-<!-- current product availability will not reach all consumers -->
 
 # Introduction
 
@@ -207,10 +207,9 @@ returns for products, and the available finance, we look at a few
 classes of products.  I'll describe the solar lantern and business in a
 box products.
 
-
 ## Solar Lantern
 
-### Initial cost
+### Solar Lantern Initial Cost
 
 A solar lantern is a tiny solar power plant with battery storage for
 nighttime lighting applications.
@@ -221,7 +220,6 @@ While we can find prices of these products, it is useful to look at the
 component costs and trends.
 
 Using prices from Lighting Global Minimum Quality Standards Memo 2013,
-
 
 | Component         | Value                   |
 |:------------------|:------------------------|
@@ -244,7 +242,7 @@ improvements in LED and PV performance and cost.  We assume that the
 component costs of a lantern and a business-in-a-box solution are
 equivalent.
 
-### Solar lantern expected returns
+### Solar Lantern Expected Returns
 
 The light provided from solar lanterns replace the light generated from
 purchased kerosene, lowering household energy costs.  Lighting Global
@@ -304,11 +302,13 @@ avoided kerosene costs, these investments are very attractive.  However,
 not all consumers have the available cash to purchase them.  We have to
 look at available financing options to bridge this gap.
 
-### Available Finance
+### Solar Lantern Available Finance
 
 - lower payments
 - for very cheap lanterns, financing may not be feasible
 - m-kopa, d.light
+
+<!-- TODO: finish this section -->
 
 The useful life of the product is set
 by the battery lifetime at what is likely 3-5 years.  Over these 3-5
@@ -332,170 +332,58 @@ Microfinance providers allow loans at rates of about 35%.  Some lantern
 companies offer finance to consumers in the form of installment
 payments.
 
+We can see that for many persons, the monthly payments can be less, but
+for others with lower existing expenditures, a lantern can mean an
+increase in expenses.
 
-
-## Business in a box
-
-Robust solutions for small-scale energy entrepreneurs are available for
-purchase.  These are moderately priced ($150) devices that have a solar panel,
-battery storage, multiple DC output ports, and charging intelligence to manage
-the battery.
-
-These systems are designed not to offset existing costs, but to earn
-revenue from charging services.
-An entrepreneur can buy this system, harvest solar energy, and sell electrical
-energy through phone charging to area villagers.
-
-Assuming there is enough demand for charging, this device can have a very
-attractive return.  The entrepreneur does incur a business risk since a
-competing phone charging solution in the same geographic area could sharply
-reduce demand and thus the income from the system.
-
-<!-- how do I express this as a range? -->
-
-- Cost of device \$150
-- cost of charge 0.20 USD
-- frequency of charge 100 / month
-- monthly revenue if charging 3 phones per day, \$20 per month
-- monthly revenue if selling electricity at retail, 30 days * 0.050 kWh/day *
-0.20 USD/kWh = $3
-
-We can look at the return as a function of the time the asset is held and
-compare to available finance rates.
-
-
-### Business in a box initial cost
-
-The business in a box solution is available and consists of a robustly
-engineering enclosure with battery storage on the order of 100 Wh.  The
-products usually come with a photovoltaic solar panel to charge the
-battery.  These devices are meant to generate income and have multiple
-output ports to charge phones or other devices simultaneously.
-
-![Caption](biab-cost.pdf)
-
-### Business in a box expected returns
-
-
-
-If the electricity is sold in the form of a phone charge, the returns
-can be very attractive.
-If the electricity is sold at retail rates however, the returns are much
-less compelling.  This is a problem facing many minigrid enterprises.
-
-Phone charging devices allow the user to avoid the cost of charging
-their own phone and can also generate revenue.
-
-<!--
-Questions:
-*need reference for cell phone charging numbers*
-*how long does it take to charge a phone*
-*what are technical limits of charging*
-*what are economic limits of charging*
-*what is the cost per minute of minutes vs the power to talk on phone*
--->
-
-Customers report spending from 0.10 USD to 0.25 USD to charge the
-battery on their cell phone.  This represents about 5 Wh of DC energy in
-the battery, and likely 6-7 Wh of AC energy delivered to the charging
-device.  Charging often involves travel but we do not attempt to price
-that time here.
-
-There are limits to the number of charges and therefore the revenue a
-device generates.  The first is the solar energy harvested per day.  The
-second is the level of phone ownership and spending power of the
-surrounding community.  It may make more sense to consider charging
-revenue per village shared among the charging device owners.  There is
-also the time and power needed to charge multiple batteries.
-
-|      | revenue per charge |
-|------|--------------------|
-| high | 0.25 USD           |
-| low  | 0.10 USD           |
-
-Table: Charging revenue in some markets
-
-
-
-Consider a device that charges a cell-phone during the day with a solar
-panel and a small charge controller.  The cost of this device will be
-mostly the panel cost since the battery is on the phone.  This device
-assumes that customers are willing to travel during the day and leave
-their phones to be charged during the day.
-
-These costs could be lowered by removing the battery, with the
-consequence that charging can only be performed during sunny periods.
-
-Assume
-
-- Phone battery capacity of 5 Wh
-- 5 Watt panel
-- cost of charge 0.20 USD
-- frequency of charge 10 / month
-
-The lifetime of the panel could be 10 - 20 years, the charge controller is
-likely less than that.
-
-We can look at the return as a function of the time the asset is held and
-compare to available finance rates.
-
-
-Assume that the charger panel, assembly, and electronics is available at \$2.0
-per watt.  For a 5 watt, panel this is \$10.
-
-A five watt panel in a 5 peak sun hour location can generate 25 Wh each day.
-This is about 5 phones worth of electricity if delivered with 100% charging
-efficiency.  The largest uncertainty in the revenue is how many phones can be
-recharged and paid for.  The capacity of the device is 4-5 per day or 120-150
-per month for a maximum revenue of \$24--\$30 per month.  This is likely
-entirely too optimistic, since the surrounding area may not have that many
-customers or charging demand.  If we instead assume a charge per day, we have
-revenues of closer to \$6--\$12 per month.
-
-
-Even at conservative estimates, the payback for this device can be within a
-month or so.
-
-### Business in a box available financing
-
-Microfinance rates allow for a monthly payment about .
-
-
-Note that the M-Kopa payment rates are approximately 15 USD per month,
-which are higher than these expenditures.  Only upper quartile customers
-are likely able to make these payments by purely displacing current
-energy costs.
-
-- type, initial cost, monthly displacement, months until payback
-- solar lantern, \$20, \$1.8, 11
-- phone charging, \$10, \$2.0, 5
-- battery in a box, retail electricity, 150 USD/month, 1.5--7.5 kWh/month, \$2, 50
-- battery in a box, phone charging 150 USD/month, 20 USD/month, 7.5 months
-- 1 kWh per day per customer microgrid without transmission
-
-
-
-
-
+<!-- graph of expected cost and expected avoided cost -->
 
 # Discussion
 
+- comparisons across devices
+- ways to lower effective interest rates
+- technology and money transactions
+
+<!-- does this work provide any testable hypothesis? -->
+<!-- has anyone looked at uptake and price signals for lanterns  -->
+<!-- study of price points and financing points monthly payment vs cost
+avoided -->
+
+What are the strategies can we pursue to lower these monthly payments?
+
+- lower initial cost
+<!-- should this stuff go in the solar lantern or business in a box section? -->
+- lower finance rates
+- lower transaction costs
+- reduce perceived risk of investment
+
+<!--
+- Central point is that lowest initial cost is not always desirable
+- These same issues come up in diesel mini-grids
+- Lower tiers are possible through financing
+- Upper tiers are more difficult
+- For example refrigerators require large marginal benefit
+- Companies are pursuing this pay-as-you-go model
+- For highest affordability, financing should be extended over the life
+  of the product
+- How do we move to higher tiers of energy access while simultaneously
+  making it available to more income levels
+- MFI rates
+- Mobile money rates and remittance transaction costs #africasupertax
+- pay as you go or company finance could lead to better terms
+-->
 
 ## Available finance terms
 
-While these devices have different forms and uses, we can classify them
-by their financial characteristics.
-
+We can assemble these estimates of cost and benefit for each type of
+device and compare to the available finance.
 We can plot these by their payback and then see where finance needs to
 be extended in order to encourage adoption.
-
-This plot refers to
 
 ![Several returns are plotted as a function of the time that the
   investment is held.  Microfinance is in the lower left corner.](general-returns.pdf)
 
-
-
+<!-- this plot may not be as clear as a payment plot -->
 
 The longer the terms of the loan or financing, the lower the monthly
 payments.  However, there are many good reasons why the shorter terms
@@ -503,7 +391,13 @@ and higher interest rates are charged.  There are many transaction costs
 and losses in the finances that require these rates.  (Engineers may
 choose to think of the system as lossy.)
 
+Another way to think of this is to notice that for longer loan terms and
+lower interest rates, the payment is reduced.
+
 ![Caption](monthly-payment.pdf)
+
+<!-- add lines for different percentile plots of energy expenditures -->
+<!-- how can we make this plot general for different devices? -->
 
 
 ## Higher initial costs could lead to lower recurring costs
@@ -520,26 +414,26 @@ risk for a consumer.
 We can plot the observed cost per daily watt hour for several models.
 This allows us to estimate the cost and benefit for these projects.
 
-|                |      |
-|----------------|------|
-| fenix readyset | blah |
-| dlight         |      |
-| barefoot       |      |
-| BBOXX          |      |
 
-Table: Incomplete
-
-
-|                   |    |   |   |
-|:------------------|---:|--:|--:|
-| Battery Charger   | 40 | 5 | 0 |
-| Solar Home System | 40 | 5 | 0 |
-| Solar Lantern     | 40 | 5 | 0 |
-
-Table: Summary of device types and benefits
+![Caption](charging-returns.pdf)
 
 
 
+Integrate the different devices into some sort of explanation of overall
+affordability.
+
+# Conclusion
+- Products should be designed simultaneously with business models
+- Can we include financial engineering in our designs?
+- Future work: extend this analysis to other products and interventions
+- Business in a box
+- Charging services
+
+
+<!--
+
+
+### Simple payback
 
 We can quantify the value of these future avoided costs using the future
 discounting of the payments according to the familiar formula
@@ -550,110 +444,15 @@ The discount rate reflects the customers preference for access to money
 now instead of money in the future.  Customers often have very high
 discount rates reflecting the focus on immediate financial concerns.
 
-
 The longer that an energy product continues to offset costs, the higher
 the benefit which is often measured in the net present value of the
 investment.  This increasing value saturates depending on the discount
 rate or relative value of money in the future.
 
-
-
-*what is npv of a lantern as a function of time create plot*
 *can we measure willingness to enter a contract?  is there an aversion
 to entering these agreements that must be considered?*
 
-Anything that reduces the life of the product reduces the net present
-value of the asset.
-
-
-
-
-### Simple payback
-
-This ratio is simply the payback time but it helps us think about and
-compare various options.  In general, if you are replacing kerosene
-short payback times are possible, if you are selling photovoltaic
-electricity at grid rates, the payback times are very long.
-
-
-![Caption](charging-returns.pdf)
-
-
-
-Integrate the different devices into some sort of explanation of overall
-affordability.
-
-<!--
 ## Retail electricity rate of return
-
-If instead of competing with retail phone charging rates, the entrepreneur
-decides to compete with grid electricity by selling electricity on a per kWh
-basis, the return of the device decreases drastically.
-
-Assume:
-
-- All electricity collected by solar panel can be sold
-- Retail cost of electricity similar to grid (0.20 USD/kWh)
-
-ReadySet
-
-- Battery 12V, 9Ah, VRLA, 54 Wh useable energy
-- Solar panel 5-75 W
-
-The retail price for a ReadySet is about 100 USD.
-
-If electricity is only sold at night, there is about 50 Wh available each day or
-1.5 kWh per month, because of the battery capacity.
-
-If instead electricity is also sold during the day, the electricity is
-constrained by the solar panel.  In a sunny location with 5 peak sun hours per
-day, we could harvest 250 Wh per day from a 50 W panel or about 7.5 kWh per
-month.
-
-At retail rates of 0.20 USD/kWh, the monthly revenue is 0.30-1.5 USD/month with
-paybacks of 60-300 months.  This assumes every kWh generated is sold.
-
-At phone charging rates, if we can sell every kWh, the battery may charge 10
-phones per day at 0.20 USD and 2 USD per day or 60 USD per month, with 1-2
-month payback periods.  Again, this may be an optimistic assumption.
-
-This wide difference underscores the difference between revenue based on an
-avoided cost in a distorted market and having to compete with the grid.
-
-The IRR are well over what microfinance will use at very short time periods.
-The avoided cost is favorable and the storage is already purchased in the
-cellphone eliminating that cost.
-
-However, since such a device is inexpensive, financing may not be necessary to
-begin with.
-
-The longer the terms of the loan, the lower the recurring cost of the
-asset.  For the lowest cost of ownership, the financing should extend
-over the life of the asset.
-
-
-In order to achieve payments comparable to average spending, the terms
-of the loan must be longer.  One limitation of loan length is the useful
-life of the battery.
-
-
-We estimate the avoided costs or revenues for a watt-scale investment.
-
-For many possible investments, the available microfinance interest rates
-are above the returns of the investment.  This requires an increase in
-monthly expenditures for customers which may be either impossible or
-undesirable.
-
-Most microfinance loans are short, less than 10 months and at interest
-rates above 35%.  This means that microfinance results in positive cash
-flow only for investments in the upper left region of the graph.
-
-If finance is available at the same terms but below the IRR, there is a
-positive cash flow for our investor.
-
-If finance is available at the same terms but above the IRR, the
-customer will have to raise her monthly expenditures above her current
-expenditures to pay for the investment.
 
 If finance is available for shorter terms than desired, the loan
 payments will be greater than the avoided costs.
@@ -672,29 +471,6 @@ consumers.
 For the range of terms where solar lanterns are attractive investments,
 there are no loans available.
 
-- Central point is that lowest initial cost is not always desirable
-- These same issues come up in diesel mini-grids
-- Lower tiers are possible through financing
-- Upper tiers are more difficult
-- For example refrigerators require large marginal benefit
-- Companies are pursuing this pay-as-you-go model
-- For highest affordability, financing should be extended over the life
-  of the product
-- How do we move to higher tiers of energy access while simultaneously
-  making it available to more income levels
-- MFI rates
-- Mobile money rates and remittance transaction costs #africasupertax
-- pay as you go or company finance could lead to better terms
-
-
-## Need to incorporate this into design process
-- How can reduction of transaction costs be incorporated into design
-  process?
-- Can companies take the place of microfinance at a benefit to both
-  consumers and providers?
-- Can technology or software lower transaction costs and thus the
-  interest rate?
-
 ## Difficulty once avoided costs are gone
 - Productive uses will need to create income streams rather than
   displace costs, making returns more uncertain
@@ -702,16 +478,6 @@ there are no loans available.
 ## Need for research to quantify assumptions
 - There is a need to quantify and publish these costs and benefits
 
-
--->
-
-# Conclusion
-- Products should be designed simultaneously with business models
-- Can we include financial engineering in our designs?
-
-
-
-<!--
 # Questions
 - can you price the salvage value of the asset?  [@ARCPayAsYouGo]
   mentions Azuri systems being given to family members.
@@ -721,39 +487,12 @@ there are no loans available.
 - are we seeing a secondary market for these products after upgrade?
 - is grammeen shakti able to service more of the market with its longer
   terms?
--->
 
-<!--
 ## Impact
 - How will this paper change our field?
     - by creating greater awareness of recurring cost issues
 - How will this paper increase energy access?
 - Who should read this to increase energy access?
 
-## Introduction
-- despite high growth rate, uneven access to poor
-- lack of financial modeling of off-grid solutions
-- IEA says 50% of power needs to be off grid
-- large scale capital like power africa currently flowing to centralized
-  solutions.  private sector will have to step in.
-- these off grid solutions will require small financing
-
-## Introduction explain NPV, payback time, IRR
-- net income as fraction of total income
-
-## Figures
-- range of irr with lantern cost and kerosene displacements
-- net present value of lantern investments as a function of discount
-  rate?
-- figure that demonstrates quartiles of income and purchasing power
-- map space of available loan terms
-
-## Discussion
-- Financing is not available over the lifetime of the battery
-- Per unit of service costs are very high compared to grid
-- We should look for alternatives to consumer financing
-- Transactions costs must be lowered
-- We can think (as EEs) of these transaction costs as line losses or
-  efficiency reductions
-
 -->
+
