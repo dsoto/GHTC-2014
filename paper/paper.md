@@ -26,12 +26,13 @@ abstract: |
 ---
 
 <!--
-TODO: restrict to lanterns for now
+TODO: finish expected returns section
 TODO: outline discussion
 TODO: create charts comparing payment and available expenditures
 TODO: outline conclusion
 TODO: first draft of discussion
 TODO: first draft of conclusion
+TODO: check for citations
 TODO: fix table output to work with two column files (try ctable?)
 https://github.com/jgm/pandoc/issues/1023
 TODO: reference for charging costs
@@ -116,18 +117,62 @@ The devices we will consider will be solar photovoltaic devices, often
 with LED lighting and battery storage.  This framework is applicable
 regardless of the technology.
 
-## Initial cost
+<!-- end introduction here? -->
 
-The cost of the device is the most parts of a financial decision for
-most customers.  For the devices available, price varies depending on
-the amount of energy available, the features of the device, and the
-quality of the product.  Prices can range from as little as 10 USD for a
-small solar lantern to hundreds of USD for a photovoltaic solar home
-system with battery storage.  To evaluate if a product is affordable, a
-consumer will compare this purchase price against their current energy
-expenditures and overall income levels.
 
-## Energy expenditures
+# Solar Lantern Results
+
+## Solar Lantern Initial Cost
+
+The cost of the solar lantern device is the most important part of a
+financial decision for most customers.  For the devices available, price
+varies depending on the amount of energy available each day, the
+features of the device, and the quality of the product.  Prices can
+range from as little as 10 USD for a small solar lantern to hundreds of
+USD for a photovoltaic solar home system with battery storage.  To
+evaluate if a product is affordable, a consumer will compare this
+purchase price against their current energy expenditures and overall
+income levels.
+
+We can estimate the cost of these devices based on the costs of their
+components.  Assuming solar panel costs, storage cost, transportation
+costs, and the solar resource, we can estimate the purchase price.
+While we can find prices of these products online and in advertising
+literature, it is useful to look at the component costs and trends.
+
+Lighting Global compiles data on lantern cost in their effort to create
+uniform standards for solar lantern products.  Using prices from
+Lighting Global [[@LightingGlobal2013]()],
+
+| Component         | Value                   |
+|:------------------|:------------------------|
+| overall           | 10 USD per klm          |
+| solar             | 5 USD per watt          |
+| battery           | 0.3 USD per Wh capacity |
+| balance of system | 2 USD per watt          |
+| derate            | 70%                     |
+
+Table: Parameters for solar lanterns from Lighting Global Minimum
+Quality Standards.
+
+The level of lighting that satisfied the survey participants is 25
+lumens with a run time of approximately 5 hours.  This is from the
+Lighting Global Standards Memo.
+The cost of a minimally acceptable solar lantern is about 10 USD and are
+one of the products most affordable to most consumers.
+These prices are likely to continue to decline over time due to
+improvements in LED and PV performance and cost.  We assume that the
+component costs of a lantern and a business-in-a-box solution are
+equivalent.
+
+It is important to keep in mind, that the most inexpensive solar
+lanterns may not satisfy all of an individual's energy needs.  It is
+important then to look at the energy expenditures, and energy avoided by
+the lantern in the decision process.
+
+## Overall Energy Expenditures
+
+<!-- todo: reference fuelwood or phone charging literature?-->
 
 To determine the amount of available capital in a household for a clean
 energy purchase, we start by measuring the amount currently spent on
@@ -157,7 +202,8 @@ candles.
 | Tiby       |       1.16 |     55.8  |    56.96 |   4.74    |
 
 Table: Millennium Village surveys of energy expenditures by household.
-Values are in USD per year.
+Values are in USD per year.  These data are taken from multiple villages
+participating in the project.
 
 These values give us some guidance for the likely expenditures in
 off-grid locations.  However, as the variability indicates, it is
@@ -165,89 +211,30 @@ necessary to evaluate the spending in a location where a pilot is being
 conducted.
 Data on phone charging expenditures and time spent by household would be
 a valuable addition to these estimates.
+For the rest of this analysis, we will only consider the displacement
+of fuel-based lighting.  Larger devices will need to consider other
+avoided costs.
 While the total energy spending by a customer is a good basis for
 estimations, it is important to quantify how much of this spending an
 energy device can replace.
 
-## Expected returns
+
+## Solar Lantern Expected Returns
 
 The consumer will want to get an estimate of how much income the device
-can bring to the household or what expenses the device can replace.  I
-will estimate this for a few broad classes of devices.  We usually
-compare this to the purchase price of the asset to see how quickly the
-purchase will pay for itself in energy savings.
-These returns may be in terms of kerosene or candles that now do not
-need to be purchased.  They may also be revenues such as income from
-charging a neighbor for cell phone charging.
-Once these expected returns are estimated, the customer determines what
-the available financing is and thus the monthly payment.
-
-
-## Available finance
-
-Finance allows the consumer to spread the payments for a power device
-over time in smaller amounts.  The consumer will want to know, can these
-payments be smaller than my existing energy payments.  For many
-customers, the available finance will result in higher payments.
-
-Assuming the customer has no ability to save to purchase the device up
-front, the consumer must look for the available financing for the
-purchase.  If suitable financing cannot be found, the device may be out
-of reach.
-I will compile some financing options that are available for reference.
-Common sources of funding are microfinance institutions, and in-house
-financing products provided by the companies themselves.  Some of these
-are lease to own and pay-as-you-go financing schemes.
-
-
-# Results
-
-Having provided a general explanation of consumer expenditures, expected
-returns for products, and the available finance, we look at a few
-classes of products.  I'll describe the solar lantern and business in a
-box products.
-
-## Solar Lantern
-
-### Solar Lantern Initial Cost
-
-A solar lantern is a tiny solar power plant with battery storage for
-nighttime lighting applications.
-We can estimate the cost of these devices based on the costs of their
-components.  Assuming solar panel costs, storage cost, transportation
-costs, and the solar resource, we can estimate the purchase price.
-While we can find prices of these products, it is useful to look at the
-component costs and trends.
-
-Using prices from Lighting Global Minimum Quality Standards Memo 2013,
-
-| Component         | Value                   |
-|:------------------|:------------------------|
-| overall           | 10 USD per klm          |
-| solar             | 5 USD per watt          |
-| battery           | 0.3 USD per Wh capacity |
-| balance of system | 2 USD per watt          |
-| derate            | 70%                     |
-
-Table: Parameters for solar lanterns from Lighting Global Minimum
-Quality Standards.
-
-The level of lighting that satisfied the survey participants is 25
-lumens with a run time of approximately 5 hours.  This is from the
-Lighting Global Standards Memo.
-The cost of a minimally acceptable solar lantern is about 10 USD and are
-one of the products most affordable to most consumers.
-These prices are likely to continue to decline over time due to
-improvements in LED and PV performance and cost.  We assume that the
-component costs of a lantern and a business-in-a-box solution are
-equivalent.
-
-### Solar Lantern Expected Returns
+can bring to the household or what expenses the device can replace.  We
+usually compare this to the purchase price of the asset to see how
+quickly the purchase will pay for itself in energy savings.  These
+returns may be in terms of kerosene or candles that now do not need to
+be purchased.  They may also be revenues such as income from charging a
+neighbor for cell phone charging.  Once these expected returns are
+estimated, the customer determines what the available financing is and
+thus the monthly payment.
 
 The light provided from solar lanterns replace the light generated from
 purchased kerosene, lowering household energy costs.  Lighting Global
 has published data on the kerosene displaced by solar lanterns as well
-as the prices paid for kerosene.
+as the prices paid for kerosene [[@CostOfKerosene]()].
 These are from a small field sample and are not meant
 to be representative of all households.
 
@@ -302,27 +289,44 @@ avoided kerosene costs, these investments are very attractive.  However,
 not all consumers have the available cash to purchase them.  We have to
 look at available financing options to bridge this gap.
 
-### Solar Lantern Available Finance
-
-- lower payments
-- for very cheap lanterns, financing may not be feasible
-- m-kopa, d.light
+## Solar Lantern Available Finance
 
 <!-- TODO: finish this section -->
 
-The useful life of the product is set
-by the battery lifetime at what is likely 3-5 years.  Over these 3-5
-year lifetimes, almost all solar lanterns have a positive net present
-value.  However, most consumers cannot afford to pay for these lanterns
-upfront and need financing.
+What are the available finance options available to a customer?
+Microfinance is a common option, but is best in areas that have a
+population density and social structure that supports it.  Another form
+of finance gaining popularity is financing from the solar lantern
+provider.  This can be either a loan or a pay-as-you-go technology.
 
-In these markets, it may not be practical to get loans as long as 3-5
-years.  Customers will not make the decision based on a net present
-value calculation but more likely on whether or not the product can save
-expenditures on kerosene.  This means that the finance payment for the
-loan must be less than the kerosene saved.  The most likely loan lengths
-are one year or less.  At these loan lengths the finance charge exceeds
-the avoided kerosene cost.
+Finance allows the consumer to spread the payments for a power device
+over time in smaller amounts.  The consumer will want to know, can these
+payments be smaller than my existing energy payments.  For many
+customers, the available finance will result in higher payments.
+
+Assuming the customer has no ability to save to purchase the device up
+front, the consumer must look for the available financing for the
+purchase.  If suitable financing cannot be found, the device may be out
+of reach.  Common sources of funding are microfinance institutions, and
+in-house financing products provided by the companies themselves.  Some
+of these are lease to own and pay-as-you-go financing schemes.
+
+[[@ARCInHouse]()]
+[[@ARCPayAsYouGo]()]
+
+M-KOPA provides financing of solar lantern products where the daily
+payment is approximately 0.50 USD per day over one year after a deposit.
+Assuming the product is sold for 200 USD, this is an effective finance
+rate of 49%.  This financing rate may appear unusually high to many
+readers, but reflects the transaction costs and difficulty of financing
+in these areas.
+
+It is more important to focus on the difference between the resulting
+daily or monthly payment and the cost of other energy services.
+This 0.50 USD/day payment is approximately 15 USD/month, well above the
+monthly spending observed in any of the villages.  This product is
+enjoying great success but the monthly cost will have to be lowered to
+be affordable to households with lower incomes.
 
 One problem then in the scaling of adoption is this difference in cost.
 This can be addressed by lowering the price of lanterns or by improving
@@ -336,26 +340,19 @@ We can see that for many persons, the monthly payments can be less, but
 for others with lower existing expenditures, a lantern can mean an
 increase in expenses.
 
+<!-- how do we unify daily payments and monthly payments? -->
 <!-- graph of expected cost and expected avoided cost -->
 
-# Discussion
 
-- comparisons across devices
-- ways to lower effective interest rates
-- technology and money transactions
+# Discussion
 
 <!-- does this work provide any testable hypothesis? -->
 <!-- has anyone looked at uptake and price signals for lanterns  -->
 <!-- study of price points and financing points monthly payment vs cost
 avoided -->
 
-What are the strategies can we pursue to lower these monthly payments?
-
-- lower initial cost
-<!-- should this stuff go in the solar lantern or business in a box section? -->
-- lower finance rates
-- lower transaction costs
-- reduce perceived risk of investment
+<!-- lower transaction costs -->
+<!-- reduce perceived risk of investment -->
 
 <!--
 - Central point is that lowest initial cost is not always desirable
@@ -373,17 +370,45 @@ What are the strategies can we pursue to lower these monthly payments?
 - pay as you go or company finance could lead to better terms
 -->
 
-## Available finance terms
+## Lowering initial cost
+
+Given that solar panels, batteries, and LED lights are approaching
+maturity, we will see further improvements in price.  However,
+reductions of 50% seem unlikely over the next few years.  We can
+extrapolate the learning curves of each of the components to gain a
+prediction of unit cost.  If we do not believe that these cost
+reductions alone will make units more affordable, we must look for other
+solutions.  Changing the terms of financing is one attractive area for
+investigation.
+
+
+## Longer Loan Terms
+
+<!-- terms are over one year but battery is likely a 3 year asset -->
+
+For the consumer, it makes sense for the length of the loan to match the
+time over which the solar lantern provides positive benefits to the
+consumer.
+
+The useful life of the product is set
+by the battery lifetime at what is likely 3-5 years.  Over these 3-5
+year lifetimes, almost all solar lanterns have a positive net present
+value.  However, most consumers cannot afford to pay for these lanterns
+upfront and need financing.
+
+In these markets, it may not be practical to get loans as long as 3-5
+years.  Customers will not make the decision based on a net present
+value calculation but more likely on whether or not the product can save
+expenditures on kerosene.  This means that the finance payment for the
+loan must be less than the kerosene saved.  The most likely loan lengths
+are one year or less.  At these loan lengths the finance charge exceeds
+the avoided kerosene cost.
+
 
 We can assemble these estimates of cost and benefit for each type of
 device and compare to the available finance.
 We can plot these by their payback and then see where finance needs to
 be extended in order to encourage adoption.
-
-![Several returns are plotted as a function of the time that the
-  investment is held.  Microfinance is in the lower left corner.](general-returns.pdf)
-
-<!-- this plot may not be as clear as a payment plot -->
 
 The longer the terms of the loan or financing, the lower the monthly
 payments.  However, there are many good reasons why the shorter terms
@@ -394,10 +419,9 @@ choose to think of the system as lossy.)
 Another way to think of this is to notice that for longer loan terms and
 lower interest rates, the payment is reduced.
 
-![Caption](monthly-payment.pdf)
-
-<!-- add lines for different percentile plots of energy expenditures -->
-<!-- how can we make this plot general for different devices? -->
+![Monthly payment for a 100 USD solar lantern.  Low interest rates and
+long loan terms are necessary to bring the payment into the range of
+current energy expenditures in rural communities.](monthly-payment.pdf)
 
 
 ## Higher initial costs could lead to lower recurring costs
@@ -414,13 +438,19 @@ risk for a consumer.
 We can plot the observed cost per daily watt hour for several models.
 This allows us to estimate the cost and benefit for these projects.
 
-
-![Caption](charging-returns.pdf)
-
-
-
 Integrate the different devices into some sort of explanation of overall
 affordability.
+
+## Perceived risk
+
+Consumers, businesses, and investors are discouraged by risk in this
+space.  Humanitarian engineers can address this risk through creating
+physically robust products as well as electronic transactions
+technologies that can reduce payment risks.  There has already been good
+progress in pay-as-you-go technologies.  The community can make a
+contribution here as well.
+
+<!-- cite lumeter, angaza, etc... -->
 
 # Conclusion
 - Products should be designed simultaneously with business models
@@ -428,13 +458,12 @@ affordability.
 - Future work: extend this analysis to other products and interventions
 - Business in a box
 - Charging services
+- Future work: study the uptake of devices with longer finance terms
+- study the willingness of people to enter long contracts
 
+# Bibliography
 
 <!--
-
-
-### Simple payback
-
 We can quantify the value of these future avoided costs using the future
 discounting of the payments according to the familiar formula
 
@@ -449,35 +478,6 @@ the benefit which is often measured in the net present value of the
 investment.  This increasing value saturates depending on the discount
 rate or relative value of money in the future.
 
-*can we measure willingness to enter a contract?  is there an aversion
-to entering these agreements that must be considered?*
-
-## Retail electricity rate of return
-
-If finance is available for shorter terms than desired, the loan
-payments will be greater than the avoided costs.
-
-The microfinance loan terms allow for the purchase of the \$20 lamp at
-near breakeven.  If the loan length were extended to 20 months, the
-consumer would see a net positive cash flow each month.
-
-There is only a small region where one of the lamps intersects with the
-available financing region.
-
-Without a financing option available, lanterns must be financed out of
-pocket.  Despite attractive paybacks, this will not be feasible for many
-consumers.
-
-For the range of terms where solar lanterns are attractive investments,
-there are no loans available.
-
-## Difficulty once avoided costs are gone
-- Productive uses will need to create income streams rather than
-  displace costs, making returns more uncertain
-
-## Need for research to quantify assumptions
-- There is a need to quantify and publish these costs and benefits
-
 # Questions
 - can you price the salvage value of the asset?  [@ARCPayAsYouGo]
   mentions Azuri systems being given to family members.
@@ -487,12 +487,5 @@ there are no loans available.
 - are we seeing a secondary market for these products after upgrade?
 - is grammeen shakti able to service more of the market with its longer
   terms?
-
-## Impact
-- How will this paper change our field?
-    - by creating greater awareness of recurring cost issues
-- How will this paper increase energy access?
-- Who should read this to increase energy access?
-
 -->
 
